@@ -17,6 +17,15 @@ const myPromise = new Promise((res, rej) => {
         });
 
 });
-myPromise.then(res => console.log(res)).catch(err => {console.log(err)});
+// myPromise.then(res => console.log(res)).catch(err => {console.log(err)});
+
+async function myfn() {
+    const res = await myPromise;
+    return "Pritam";
+}
+
+const res = await myfn();
+console.log(res);
+
 
 
